@@ -1,26 +1,15 @@
 {
-        "name": "md/division-project",
+        "name": "md/division-simple",
         "description": "The University of Iowa Division of Student Life Project Code and Theme",
         "type": "silverstripe-module",
         "require": {
-                "php": ">=5.3.2",
-                "silverstripe/cms": "3.1.2",
-                "silverstripe/framework": "3.1.2",
-                "silverstripe/installer": "*",
-                "silverstripe-themes/simple": "*",
-                "undefinedoffset/sortablegridfield": "*",
-                "unclecheese/betterbuttons": "*",
-                "silverstripe/dashboard": "*",
-                "unclecheese/eventcalendar": "*",
-                "colymba/gridfield-bulk-editing-tools": "*",
-                "silverstripe/blog": "*",
-                "silverstripe/widgets": "*",
-                "silverstripe/userforms": "*",
-                "silverstripe/recaptcha": "*",
-                "simplepie/simplepie": "*",
-                "silverstripe/googlesitemaps": "*",
-                "silverstripe/timepickerfield": "*",
-                "md/division-bar": "dev-master"
+            "php": ">=5.3.2",
+            "silverstripe/cms": "3.1.2",
+            "silverstripe/framework": "3.1.2",
+            "silverstripe-themes/simple": "*",
+            "undefinedoffset/sortablegridfield": "*",
+            "colymba/gridfield-bulk-editing-tools": "*",
+            "md/division-bar": "dev-master"
         },
         "extra": {
                 "branch-alias": {
