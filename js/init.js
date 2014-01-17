@@ -16,18 +16,6 @@ $(document).ready(function() {
      });
  });
 
-
-$('header').affix({
-      offset: {
-        top: 
-          function () {
-            return (this.bottom = $('.bg-container').height()+43);
-          }
-      }
-}); 
-
-//test
-
  /*$(window).scroll(function() {
     if($(window).scrollTop() > 100){
          $('.division-topbar').slideUp();

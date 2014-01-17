@@ -24,7 +24,7 @@
     
     $Layout
 
-    <script type="text/javascript" src="division-simple/js/build/main.js"></script>
+    <script type="text/javascript" src="{$ThemeDir}/js/build/main.js"></script>
 	<% include GoogleAnalytics %>
 
 </body>
