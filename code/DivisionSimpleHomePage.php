@@ -1,5 +1,5 @@
 <?php
-class DivisionSimpleHomePage extends Page {
+class DivisionSimpleHomePage extends DivisionSimplePage {
 
 	private static $db = array(
 
@@ -15,7 +15,7 @@ class DivisionSimpleHomePage extends Page {
 	);
 
 	private static $allowed_children = array(
-		"Section"
+		"DivisionSimpleSection"
 	);
 
 
@@ -27,7 +27,7 @@ class DivisionSimpleHomePage extends Page {
 
 
 }
-class DivisionSimpleHomePage_Controller extends Page_Controller {
+class DivisionSimpleHomePage_Controller extends DivisionSimplePage_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -52,10 +52,5 @@ class DivisionSimpleHomePage_Controller extends Page_Controller {
 
 	}
 
-	public function Sections(){
-		$sections = Section::get();
-
-		return $sections;
-	}
 
 }

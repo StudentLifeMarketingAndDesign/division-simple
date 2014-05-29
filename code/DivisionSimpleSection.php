@@ -1,5 +1,5 @@
 <?php
-class DivisionSimpleSection extends Page {
+class DivisionSimpleSection extends DivisionSimplePage {
 
 	private static $db = array(
 
@@ -21,16 +21,13 @@ class DivisionSimpleSection extends Page {
 		return $f;
 	}
 
-	public function SectionLink(){
-		$base = Director::baseURL();
-
-		return $base.'#'.$this->URLSegment;
-
+	public function Link(){
+		return '#'.$this->URLSegment;
 	}
 
 
 }
-class DivisionSimpleSection_Controller extends Page_Controller {
+class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

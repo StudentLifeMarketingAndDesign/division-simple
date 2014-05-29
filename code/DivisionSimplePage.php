@@ -54,4 +54,9 @@ class DivisionSimplePage_Controller extends ContentController {
 
 	}
 
+
+	public function DivisionSimpleSections(){
+		$sections = DivisionSimpleSection::get()->filter(array("ParentID" => $this->ID, "ShowInMenus" => 1));
+		return $sections;
+	}
 }

@@ -8,28 +8,28 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          'themes/mlk/bower_components/jquery/jquery.js',
-          'themes/mlk/bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-          'themes/mlk/bower_components/sass-bootstrap-compass/dist/js/sass-bootstrap.min.js',
-          'division-bar/js/division-bar.js',
-          'themes/mlk/js/*.js'
+          'bower_components/jquery/jquery.js',
+          'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+          'bower_components/sass-bootstrap-compass/dist/js/sass-bootstrap.min.js',
+          '../division-bar/js/division-bar.js',
+          'js/*.js'
         ],
-        dest: 'themes/mlk/js/build/main.js'
+        dest: 'js/build/main.js'
       }
     },
 
     uglify: {
       build: {
-        src: ['themes/mlk/js/build/main.js'],
-        dest: 'themes/mlk/js/build/main.min.js'
+        src: ['build/main.js'],
+        dest: 'build/main.min.js'
       }
     },
 
     compass: {
       dist: {                   // Target
         options: {              // Target options
-          sassDir: 'themes/mlk/scss',
-          cssDir: 'themes/mlk/css',
+          sassDir: 'scss',
+          cssDir: 'css',
           environment: 'production'
         }
       }
@@ -39,9 +39,9 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'themes/mlk/images/',
+          cwd: 'images/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'themes/mlk/images/'
+          dest: 'images/'
         }]
       }
     },

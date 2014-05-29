@@ -11,7 +11,7 @@
     		<div class="clearfix"></div>
     	</div>
 </div>
-<% include Navigation %>
+<% include DivisionSimpleNavigation %>
 	<div class= "container main-content">
 		<div class="container">
 		
@@ -22,13 +22,13 @@
 			   		</div>
 			    	<div class="col-md-9 content-block">
 			    		$Content
-              <% include Slides %>
+              <% include DivisionSimpleSlides %>
 			    	</div><!-- end .span9 -->
 				</section><!-- end .row -->
 				<hr />
 			<% end_loop %>
 
-      <% include Footer %>
+      <% include DivisionSimpleFooter %>
 		
 		</div>
 	</div>

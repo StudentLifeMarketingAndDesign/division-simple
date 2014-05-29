@@ -34,7 +34,7 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="msapplication-TileImage" content="{$ThemeDir}/images/favicons/favicon-144.png">
 
-	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
+	<link rel="stylesheet" type="text/css" href="division-simple/css/master.css" />
 
 	<!--[if lt IE 9]>
 		<script src="{$ThemeDir}/vendor/html5shiv/dist/html5shiv.js"></script>
@@ -48,8 +48,8 @@
     
     $Layout
 
-    <script type="text/javascript" src="{$ThemeDir}/js/build/main.js"></script>
-	<% include GoogleAnalytics %>
+    <script type="text/javascript" src="division-simple/js/build/main.js"></script>
+	<% include DivisionSimpleGoogleAnalytics %>
 
 </body>
 </html>

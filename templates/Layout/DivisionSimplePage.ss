@@ -5,6 +5,6 @@
 				$Content
 				$Form
 			</section>
-		<% include Footer %>
+		<% include DivisionSimpleFooter %>
 	</div>
 </div>
