@@ -1,5 +1,5 @@
 <?php
-class Slide extends DataObject {
+class DivisionSimpleSlide extends DataObject {
 
 	private static $db = array(
 		"SortOrder" => "Int"
@@ -7,7 +7,7 @@ class Slide extends DataObject {
 	);
 	private static $has_one = array(
 		"Image" => "Image",
-		"SlideshowSection" => "SlideshowSection"
+		"SlideshowSection" => "DivisionSimpleSlideshowSection"
 	);
 	private static $belongs_many_many = array (
 	);

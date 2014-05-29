@@ -1,5 +1,5 @@
 <?php
-class Section extends Page {
+class DivisionSimpleSection extends Page {
 
 	private static $db = array(
 
@@ -30,7 +30,7 @@ class Section extends Page {
 
 
 }
-class Section_Controller extends Page_Controller {
+class DivisionSimpleSection_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
