@@ -1,9 +1,8 @@
 <?php
-class HomePage extends Page {
+class DivisionSimpleSlideshowSection extends Section {
 
 	private static $db = array(
-
-
+		"hideSlides" => "Boolean"
 	);
 
 	private static $has_one = array(
@@ -12,22 +11,29 @@ class HomePage extends Page {
 	private static $belongs_many_many = array (
 	);
 	private static $has_many = array(
-	);
-
-	private static $allowed_children = array(
-		"Section"
+		"Slides" => "DivisionSimpleSlide"
 	);
 
 
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
+
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		$gridFieldConfig->addComponent(new GridFieldBulkImageUpload());
 		
+		$gridField = new GridField("Slides", "Slides", $this->Slides(), $gridFieldConfig);
+
+		$f->addFieldToTab("Root.Main", new CheckboxField("hideSlides", "Hide slides from the section, use a 'start slideshow' link instead"), "Content"); // add the grid field to a tab in the CMS	*/
+		$f->addFieldToTab("Root.Main", $gridField, "Content"); // add the grid field to a tab in the CMS	*/
+			
+
 		return $f;
 	}
 
 
 }
-class HomePage_Controller extends Page_Controller {
+class SlideshowSection_Controller extends Section_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -50,12 +56,6 @@ class HomePage_Controller extends Page_Controller {
 	public function init() {
 		parent::init();
 
-	}
-
-	public function Sections(){
-		$sections = Section::get();
-
-		return $sections;
 	}
 
 }
