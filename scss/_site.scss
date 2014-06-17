@@ -9,14 +9,6 @@
 
 body{
 
-	font-family: 'Montserrat', 'Maax', 'Gotham' sans-serif;
-	/*padding-top: 45px;*/
-	background: #000;
-	color: rgba(32, 32, 32, 0.96);
-
-	@media screen and (min-width: 1024px){
-		/* padding-top: 68px; */
-	}
 }
 
 body.modal-open {
@@ -24,13 +16,13 @@ body.modal-open {
 	}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: 'Montserrat', 'Maax', 'Gotham' sans-serif;	
+	
 }
 a{ 
-	color: darken($blue, 10);
+	
 }
 hr {
-	border-top: 1px solid #c49866;
+	
 }
 ul{
 	list-style-type: square;
@@ -38,11 +30,8 @@ ul{
 
 header{
 	z-index: 10000;
-	background: black;
-	border-bottom: #008f8f solid 2px;
 
 	@media screen and (min-width: $screen-sm){
-		border-bottom: #008f8f solid 4px;
 
 	}
 
@@ -59,59 +48,13 @@ header.affix{
 }
 
 
-.navbar-brand {
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 0;
-
-	@media screen and (min-width: $screen-sm){
-		padding-top: 10px;
-		padding-bottom: 5px;
-	}
-}
-
-.navbar-toggle {
-	 padding: 2px 10px;
-
-	 @media screen and (min-width: $screen-sm){
-	 	padding: 9px 10px;
-	 }
-
-}
 
 
-.navbar-brand img{
-		height: 30px;
-
-	@media screen and (min-width: 1024px){
-		height: 50px;
-	}
-
-}
-.nav>li a{
-	color: $lightBrown;
-	&:hover, &:focus {
-		background: rgba(54, 52, 52, 0.96);
-		color: lighten($lightBrown, 5);
-
-	}
-	font-size: 0.9em;
-
-	@media screen and (min-width: 1024px){
-		padding-top: 37px;
-		padding-bottom: 10px;
-		font-size: 1em;
-
-	}
-}
 
 
 
 .navbar {
-	/*background: rgba(255,255,255,0.95);*/
-	background: rgba(32, 32, 32, 0.96);
 	box-shadow: 0px 1px 3px rgba(51, 51, 51, 0.19);
-	/*border-bottom: 1px solid #ddd;*/
 }
 
 .navbar-nav {
@@ -122,7 +65,6 @@ header.affix{
 }
 
 .icon-bar {
-	background: #e9b77f;
 }
 .navbar-collapse {
 	/*background: white;*/
@@ -134,11 +76,9 @@ header.affix{
 /* Additional Styles */
 
 .container.main-content {
-	width: 100%;
 	
-
 	h1 {
-		color: $blue;
+
 		text-transform: uppercase;
 		margin: 0.8em 0;
 		font-size: 30px;
@@ -152,7 +92,7 @@ header.affix{
 	}
 
 	h2 {
-		color: $brown;
+
 		text-transform: uppercase;
 		font-size: 22px;
 
@@ -165,7 +105,6 @@ header.affix{
 	}
 
 	h3 {
-		color: #BD5E19;
 		font-size: 19px;
 
 		@media screen and (min-width: 1024px){
@@ -174,23 +113,14 @@ header.affix{
 
 	}
 
-
-	background-image:url(../images/PaperMLKBackground.jpg); 
-	background-position-x: 50%;
-	background-repeat: repeat-y;
-	background-color: black;
-
-	-webkit-box-shadow: inset 0px 14px 33px -11px rgba(34, 20, 9, 0.43);
-	-moz-box-shadow: inset 0px 14px 33px -11px rgba(34, 20, 9, 0.43);
-	box-shadow: inset 0px 14px 33px -11px rgba(34, 20, 9, 0.43);
 	
 }
 
 .hero-text-container{
-	background: rgba(51, 51, 51, 0.05);
+	
 	padding: 10px 0;
 	@media screen and (min-width: 768px){
-		background: none;
+
 	
 	}
 
@@ -200,7 +130,7 @@ header.affix{
 	font-size: 1.5em;
 	font-weight: bold;
 	color: white;
-	text-shadow: 0 2px 0 rgba(0,0,0,0.4);
+
 
 	@media screen and (min-width: 768px){
 		font-size: 2em;
@@ -226,7 +156,6 @@ header.affix{
 			margin: 1%;
 			padding: 1%;
 			@media screen and (min-width: 768px){
-				background: $blue;
 				display: inline-block;
 			}
 
@@ -303,21 +232,14 @@ header.affix{
 }
 
 .bg-container {
-	background-image: url('../images/bg.jpg');
-	background-color: #000;
-	background-repeat: no-repeat;
-	background-position: 40% 0;
-	background-size: cover;
+
 
 	@media screen and (min-width: 768px){
-		background-position: 30% 0;
-		background-size: auto;
-		height: 700px;
+
 
 	}
 	@media screen and (min-width: 1224px){
-		background-position: 50% 0;
-		height: 800px;
+
 
 	}
 
@@ -328,7 +250,7 @@ header.affix{
 }
 /* Main Content (for those standalone pages) */
 .main-content {
-	background-color: $paperBrown;
+
 }
 
  .container.main-content {
@@ -340,25 +262,25 @@ header.affix{
 
 		
 		h1[id]{
-			padding-top: 60px;
+
 
 			@media screen and (min-width: 1024px){
-				padding-top: 90px;
+				
 			}
 		}
 
 		section.first h1[id]{
-			padding-top: 0;
+			
 
 			@media screen and (min-width: 990px){
-					padding-top: 90px;
+					
 				}			
 
 		}
 
 		.content-block {
 			@media screen and (min-width: 990px){
-			padding-top: 90px;
+			
 			}
 		}
 		.content-block h2:first-child{
@@ -377,8 +299,7 @@ header.affix{
 
 
 		section{
-			/*border-bottom: 1px solid #eee;*/
-			padding-bottom: 60px;
+	
 		}
 		section.first h1[id]{
 			
@@ -461,7 +382,6 @@ header.affix{
 }
 
 footer {
-	color: $brown;
 	margin-top: 5%;
 }
 
