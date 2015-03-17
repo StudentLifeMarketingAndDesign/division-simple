@@ -2,29 +2,26 @@
 class DivisionSimpleHomePage extends DivisionSimplePage {
 
 	private static $db = array(
-
-
+		'EventDate' => 'Text',
 	);
 
 	private static $has_one = array(
 
 	);
-	private static $belongs_many_many = array (
+	private static $belongs_many_many = array(
 	);
 	private static $has_many = array(
 	);
 
 	private static $allowed_children = array(
-		"DivisionSimpleSection"
+		"DivisionSimpleSection",
 	);
 
-
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$f = parent::getCMSFields();
-		
+		$f->addFieldToTab('Root.Main', new TextField('EventDate', 'Event Date (if applicable)'));
 		return $f;
 	}
-
 
 }
 class DivisionSimpleHomePage_Controller extends DivisionSimplePage_Controller {
@@ -44,13 +41,12 @@ class DivisionSimpleHomePage_Controller extends DivisionSimplePage_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
 		parent::init();
 
 	}
-
 
 }
