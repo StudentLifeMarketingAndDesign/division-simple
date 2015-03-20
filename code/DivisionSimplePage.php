@@ -25,37 +25,36 @@ class DivisionSimplePage_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
 		parent::init();
 
-		// Note: you should use SS template require tags inside your templates 
-		// instead of putting Requirements calls here.  However these are 
+		// Note: you should use SS template require tags inside your templates
+		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
 
 		$themeDir = $this->owner->ThemeDir();
 		$baseFolder = Director::baseFolder();
 		Requirements::block('division-bar/css/_division-bar.css');
-	    Requirements::set_combined_files_folder($themeDir. '/_combined');
+		Requirements::set_combined_files_folder($themeDir . '/_combined');
 
 		/*$scripts = array();
-		
-		$scripts[] = $themeDir . "/vendor/jquery-1.10.2.js";		
-		$scripts[] = $themeDir . "/vendor/jquery-ui.js";
-		$scripts[] = $themeDir . "/vendor/magnific/jquery.magnific-popup.js";		
-		$scripts[] = $themeDir . "/vendor/bootstrap3/dist/js/sass-bootstrap.min.js";
-		$scripts[] = 'division-bar/js/division-bar.js';
-		$scripts[] = $themeDir . "/js/init.js";
 
-		
-		Requirements::combine_files('allScripts.js', $scripts);*/
+	$scripts[] = $themeDir . "/vendor/jquery-1.10.2.js";
+	$scripts[] = $themeDir . "/vendor/jquery-ui.js";
+	$scripts[] = $themeDir . "/vendor/magnific/jquery.magnific-popup.js";
+	$scripts[] = $themeDir . "/vendor/bootstrap3/dist/js/sass-bootstrap.min.js";
+	$scripts[] = 'division-bar/js/division-bar.js';
+	$scripts[] = $themeDir . "/js/init.js";
+
+
+	Requirements::combine_files('allScripts.js', $scripts);*/
 
 	}
 
-
-	public function DivisionSimpleSections(){
+	public function DivisionSimpleSections() {
 		$sections = DivisionSimpleSection::get()->filter(array("ParentID" => $this->ID, "ShowInMenus" => 1));
 		return $sections;
 	}

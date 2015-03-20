@@ -31,9 +31,7 @@ class DivisionSimpleSection extends DivisionSimplePage {
 
 		return $f;
 	}
-	public function Link() {
-		return '#' . $this->URLSegment;
-	}
+
 }
 
 class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
@@ -62,6 +60,8 @@ class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
 	}
 
 	public function index() {
+		$parent = $this->getParent();
+
 		$url = '#' . $this->URLSegment;
 
 		$this->redirect($url);
