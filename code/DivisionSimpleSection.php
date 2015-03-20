@@ -31,7 +31,9 @@ class DivisionSimpleSection extends DivisionSimplePage {
 
 		return $f;
 	}
-
+	public function Link() {
+		return '#' . $this->URLSegment;
+	}
 }
 
 class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
