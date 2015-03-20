@@ -2,7 +2,7 @@
 class DivisionSimpleSection extends DivisionSimplePage {
 
 	private static $db = array(
-
+		"hideSlides" => "Boolean",
 	);
 
 	private static $has_one = array(
@@ -11,19 +11,31 @@ class DivisionSimpleSection extends DivisionSimplePage {
 	private static $belongs_many_many = array(
 	);
 	private static $has_many = array(
+		"Slides" => "DivisionSimpleSlide",
 	);
+
+	private static $singular_name = 'Section';
+	private static $plural_name = 'Sections';
 
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		$gridFieldConfig->addComponent(new GridFieldBulkUpload());
+
+		$gridField = new GridField("Slides", "Slides", $this->Slides(), $gridFieldConfig);
+
+		$f->addFieldToTab("Root.Slides", new CheckboxField("hideSlides", "Hide slides from the section, use a 'start slideshow' link instead"), "Content"); // add the grid field to a tab in the CMS	*/
+		$f->addFieldToTab("Root.Slides", $gridField); // add the grid field to a tab in the CMS	*/
+
 		return $f;
 	}
-
 	public function Link() {
 		return '#' . $this->URLSegment;
 	}
-
 }
+
 class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
 
 	/**
@@ -50,9 +62,7 @@ class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
 	}
 
 	public function index() {
-		$parent = $this->getParent();
-
-		$url = $parent->Link() . '#' . $this->URLSegment;
+		$url = '#' . $this->URLSegment;
 
 		$this->redirect($url);
 
