@@ -23,24 +23,24 @@
 </head>
 
 <body data-spy="scroll" data-target="#floaty-nav">
-<div id="fb-root"></div>
+<%--<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=584926258188205";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));</script>--%>
  	<% include DivisionBar %>
 
     $Layout
     <% include GoogleAnalytics %>
 	<!-- Scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="{$BaseHref}/division-project/bower_components/jquery/jquery.min.js">\x3C/script>')</script>
+	<%--<script>window.jQuery || document.write('<script src="{$BaseHref}/division-project/bower_components/jquery/jquery.min.js">\x3C/script>')</script>
 	<script type="text/javascript" src="{$BaseHref}division-simple/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-	<script type="text/javascript" src="{$BaseHref}/division-bar/js/division-bar.js"></script>
-	<script type="text/javascript" src="{$BaseHref}{$ThemeDir}/js/{$URLSegment}.js"></script>
+	<script type="text/javascript" src="{$BaseHref}/division-bar/js/division-bar.js"></script>--%>
+	<script type="text/javascript" src="{$BaseHref}{$ThemeDir}/build/{$URLSegment}.js"></script>
 
 </body>
 </html>

@@ -3,28 +3,25 @@ class DivisionSimpleSection extends DivisionSimplePage {
 
 	private static $db = array(
 
-
 	);
 
 	private static $has_one = array(
 
 	);
-	private static $belongs_many_many = array (
+	private static $belongs_many_many = array(
 	);
 	private static $has_many = array(
 	);
 
-
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$f = parent::getCMSFields();
-		
+
 		return $f;
 	}
 
-	public function Link(){
-		return '#'.$this->URLSegment;
+	public function Link() {
+		return '#' . $this->URLSegment;
 	}
-
 
 }
 class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
@@ -44,7 +41,7 @@ class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
@@ -52,10 +49,10 @@ class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
 
 	}
 
-	public function index(){
+	public function index() {
 		$parent = $this->getParent();
 
-		$url = $parent->Link().'#'.$this->URLSegment;
+		$url = $parent->Link() . '#' . $this->URLSegment;
 
 		$this->redirect($url);
 
