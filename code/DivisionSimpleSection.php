@@ -62,7 +62,7 @@ class DivisionSimpleSection_Controller extends DivisionSimplePage_Controller {
 	public function index() {
 		$parent = $this->getParent();
 
-		$url = '#' . $this->URLSegment;
+		$url = $parent->Link() . '#' . $this->URLSegment;
 
 		$this->redirect($url);
 
